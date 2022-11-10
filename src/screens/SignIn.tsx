@@ -62,32 +62,34 @@ export function SignIn() {
         <Text>Acesse sua conta ou cadastre-se</Text>
       </View>
 
-      <VStack marginRight="4" marginLeft="4" borderRadius="2xl" bg="green.300">
-        <Center marginTop="12" marginBottom="12" marginRight="2" marginLeft="2">
-          <Input
-            placeholder="Email"
-            keyboardType="email-address"
-            autoCapitalize="none"
-          />
+      <View bg="green.500" pt="4" pb="4">
+        <VStack marginRight="4" marginLeft="4" borderRadius="2xl" bg="gray.100">
+          <Center marginTop="4" marginBottom="4" marginRight="2" marginLeft="2">
+            <Input
+              placeholder="Email"
+              keyboardType="email-address"
+              autoCapitalize="none"
+            />
 
-          <Input placeholder="Senha" secureTextEntry />
+            <Input placeholder="Senha" secureTextEntry />
 
-          <View alignSelf={'flex-start'} mt="0" marginBottom="2"></View>
-          <Button title="Entrar com Google" />
-          <Button title="ENTRAR" />
-          <Center mt={8}>
-            <Text mb="4" color="gray.700" fontSize="sm">
-              Esqueci a minha senha
-            </Text>
+            <View alignSelf={'flex-start'} mt="0" marginBottom="2"></View>
+            <Button title="Entrar com Google" />
+            <Button title="ENTRAR" />
+            <Center mt={8}>
+              <Text mb="4" color="gray.700" fontSize="sm">
+                Esqueci a minha senha
+              </Text>
 
-            <Text color="gray.700" fontSize="md" mb={3} fontFamily="body">
-              Ainda não se cadastrou?
-            </Text>
+              <Text color="gray.700" fontSize="md" mb={3} fontFamily="body">
+                Ainda não se cadastrou?
+              </Text>
+            </Center>
+
+            <Button title="Criar Conta" variant="outline" bg="info.100" />
           </Center>
-
-          <Button title="Criar Conta" variant="outline" bg="info.100" />
-        </Center>
-      </VStack>
+        </VStack>
+      </View>
 
       <Center my="4" flexDirection="row" alignItems="center" marginLeft={2}>
         <LogoSvg />

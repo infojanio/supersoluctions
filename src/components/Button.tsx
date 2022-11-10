@@ -10,12 +10,13 @@ export function Button({ title, variant = 'solid', ...rest }: Props) {
     <ButtonNativeBase
       w="full"
       h={12}
-      bg={variant === 'outline' ? 'transparent' : 'blue.700'}
+      mb="2"
+      bg={variant === 'outline' ? 'transparent' : 'green.600'}
       borderWidth={variant === 'outline' ? 1.5 : 0}
       borderColor="green.500"
       rounded="full"
       _pressed={{
-        bg: variant === 'outline' ? 'green.300' : 'blue.500',
+        bg: variant === 'outline' ? 'green.300' : 'green.500',
       }}
       {...rest}
     >
