@@ -3,19 +3,19 @@ import { Input as NativeBaseInput, IInputProps } from 'native-base' //renomeia o
 export function Input({ ...rest }: IInputProps) {
   return (
     <NativeBaseInput
-      bg="gray.400"
+      bg="gray.300"
       h={12}
       px={4}
-      borderWidth={0}
+      borderWidth={1}
       fontSize="md"
       color="black"
       fontFamily="body"
       mb={4}
-      placeholderTextColor="gray.300"
+      placeholderTextColor="gray.100"
       _focus={{
-        bg: 'blueGray.200',
+        bg: 'blueGray.100',
         borderWidth: 1,
-        borderColor: 'green.500',
+        borderColor: 'gray.100',
       }}
       {...rest}
     />
