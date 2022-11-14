@@ -98,6 +98,7 @@ export function SignUp() {
 
             <Box w="100%">
               <Input
+                keyboardType="email-address"
                 InputLeftElement={
                   <Icon
                     as={<MaterialIcons name="email" />}

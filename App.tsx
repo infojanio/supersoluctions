@@ -19,7 +19,7 @@ export default function App() {
     <NativeBaseProvider>
       <StatusBar barStyle="light-content" translucent />
 
-      {fontsLoaded ? <SignIn /> : <Loading />}
+      {fontsLoaded ? <SignUp /> : <Loading />}
     </NativeBaseProvider>
   )
 }

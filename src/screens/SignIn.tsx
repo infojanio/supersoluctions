@@ -174,7 +174,7 @@ export function SignIn() {
               </Text>
 
               <Box w="324">
-                <Divider my={12} bgColor="gray.300" borderBottomWidth="1.5" />
+                <Divider my={8} bgColor="green.100" borderBottomWidth="1" />
               </Box>
 
               <Text
