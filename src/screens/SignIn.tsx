@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   VStack,
   Image,
@@ -7,16 +8,28 @@ import {
   View,
   ScrollView,
   IconButton,
+  Box,
+  Icon,
+  Divider,
+  Flex,
+  Stack,
 } from 'native-base'
 
 import LogoSvg from '@assets/logomarca.svg'
+import GoogleSvg from '../../assets/google.svg'
+
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
 import { Feather } from '@expo/vector-icons'
-import React from 'react'
+import { MaterialIcons } from '@expo/vector-icons'
 //import BackgoundImg from '@assets/background.png'
 
 export function SignIn() {
+  const [show, setShow] = React.useState(false) //mostra senha
+  const handleClick = () => setShow(!show)
+
+  // const { signInWithGoogle, signInWithApple } = useAuth() //contexto de autenticação
+
   return (
     <ScrollView
       contentContainerStyle={{ flexGrow: 1 }}
@@ -62,41 +75,136 @@ export function SignIn() {
         <Text>Acesse sua conta ou cadastre-se</Text>
       </View>
 
-      <View bg="green.500" pt="4" pb="4">
-        <VStack marginRight="4" marginLeft="4" borderRadius="2xl" bg="gray.100">
+      <View bg="green.500" pt="4" pb="18">
+        <VStack marginRight="4" marginLeft="4" borderRadius="2xl" bg="gray.50">
           <Center marginTop="4" marginBottom="4" marginRight="2" marginLeft="2">
-            <Input
-              placeholder="Email"
-              keyboardType="email-address"
-              autoCapitalize="none"
-            />
+            <Box w="100%">
+              <Input
+                keyboardType="phone-pad"
+                InputLeftElement={
+                  <Icon
+                    as={<MaterialIcons name="phone" />}
+                    size="sm"
+                    m={2}
+                    _light={{
+                      color: 'black',
+                    }}
+                    _dark={{
+                      color: 'gray.400',
+                    }}
+                  />
+                }
+                placeholder="(62) 0 0000-0000" // mx={4}
+                _light={{
+                  placeholderTextColor: 'blueGray.400',
+                }}
+                _dark={{
+                  placeholderTextColor: 'blueGray.50',
+                }}
+              />
+            </Box>
 
-            <Input placeholder="Senha" secureTextEntry />
-
+            <Box w="100%">
+              <Input
+                type={show ? 'text' : 'password'}
+                InputRightElement={
+                  <Stack
+                    maxWidth={32}
+                    direction={{
+                      md: 'row',
+                    }}
+                    space="4"
+                  >
+                    <Button
+                      borderRadius="none"
+                      size={'sm'}
+                      backgroundColor="gray.50"
+                      title=""
+                      ml={1}
+                      onPress={handleClick}
+                      variant="solid"
+                      rightIcon={
+                        <Icon
+                          as={MaterialIcons}
+                          name="visibility"
+                          size="lg"
+                          m={2}
+                          _light={{
+                            color: 'black',
+                          }}
+                          _dark={{
+                            color: 'gray.300',
+                          }}
+                        />
+                      }
+                    >
+                      {show ? 'Hide' : 'Show'}
+                    </Button>
+                  </Stack>
+                }
+                InputLeftElement={
+                  <Icon
+                    as={<MaterialIcons name="lock" />}
+                    size="sm"
+                    m={2}
+                    _light={{
+                      color: 'black',
+                    }}
+                    _dark={{
+                      color: 'gray.300',
+                    }}
+                  />
+                }
+                placeholder="Senha" // mx={4}
+                _light={{
+                  placeholderTextColor: 'blueGray.400',
+                }}
+                _dark={{
+                  placeholderTextColor: 'blueGray.50',
+                }}
+              />
+            </Box>
             <View alignSelf={'flex-start'} mt="0" marginBottom="2"></View>
-            <Button title="Entrar com Google" />
+
             <Button title="ENTRAR" />
-            <Center mt={8}>
-              <Text mb="4" color="gray.700" fontSize="sm">
+
+            <Center mt={4}>
+              <Text mb="4" color="green.700" fontSize="sm">
                 Esqueci a minha senha
               </Text>
 
-              <Text color="gray.700" fontSize="md" mb={3} fontFamily="body">
-                Ainda não se cadastrou?
+              <Box w="324">
+                <Divider my={12} bgColor="gray.300" borderBottomWidth="1.5" />
+              </Box>
+
+              <Text
+                color="green.700"
+                fontSize="sm"
+                fontWeight="bold"
+                mt={4}
+                mb={2}
+                fontFamily="body"
+              >
+                AINDA NÃO TENHO CADASTRO
               </Text>
             </Center>
 
-            <Button title="Criar Conta" variant="outline" bg="info.100" />
+            <Button title="Criar Conta" variant="outline" bg="gray.200" />
           </Center>
         </VStack>
-      </View>
 
-      <Center my="4" flexDirection="row" alignItems="center" marginLeft={2}>
-        <LogoSvg />
-        <Text color="gray.700" fontSize="lg">
-          JL Soluctions
-        </Text>
-      </Center>
+        <Center my="2" flexDirection="row" alignItems="center" marginLeft={2}>
+          <LogoSvg />
+          <Text
+            color="gray.100"
+            fontWeight="extrabold"
+            fontSize="lg"
+            fontStyle="italic"
+          >
+            CompreApp
+          </Text>
+        </Center>
+      </View>
     </ScrollView>
   )
 }
