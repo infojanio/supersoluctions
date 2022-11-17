@@ -8,11 +8,12 @@ export function Loading() {
       <Image
         size={80}
         source={SplashImg}
+        defaultSource={SplashImg}
         alt="Pessoa comprando online"
         resizeMode="contain"
         position="relative"
       />
-      <Text fontSize={14}>JL Soluctions </Text>
+      <Text fontSize={14}>Compre App Soluctions </Text>
 
       <Spinner color="green.500" />
     </Center>

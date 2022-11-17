@@ -15,6 +15,7 @@ import {
   Stack,
 } from 'native-base'
 
+import { authNavigatorRoutesProps } from '@routes/auth.routes'
 import LogoSvg from '@assets/logomarca.svg'
 import GoogleSvg from '../../assets/google.svg'
 
@@ -22,13 +23,19 @@ import { Input } from '@components/Input'
 import { Button } from '@components/Button'
 import { Feather } from '@expo/vector-icons'
 import { MaterialIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 //import BackgoundImg from '@assets/background.png'
 
 export function SignIn() {
   const [show, setShow] = React.useState(false) //mostra senha
   const handleClick = () => setShow(!show)
 
-  // const { signInWithGoogle, signInWithApple } = useAuth() //contexto de autenticação
+  const navigation = useNavigation<authNavigatorRoutesProps>()
+
+  //Criar nova conta
+  function handleNewAccount() {
+    navigation.navigate('signUp')
+  }
 
   return (
     <ScrollView
@@ -39,7 +46,8 @@ export function SignIn() {
         space={2}
         alignItems="center"
         direction="row"
-        marginTop="8"
+        marginTop="4"
+        marginBottom={4}
         marginLeft="2"
       >
         {['sm'].map((size) => (
@@ -166,7 +174,7 @@ export function SignIn() {
             </Box>
             <View alignSelf={'flex-start'} mt="0" marginBottom="2"></View>
 
-            <Button title="ENTRAR" />
+            <Button title="ENTRAR" fontWeight={'bold'} />
 
             <Center mt={4}>
               <Text mb="4" color="green.700" fontSize="sm">
@@ -189,7 +197,12 @@ export function SignIn() {
               </Text>
             </Center>
 
-            <Button title="Criar Conta" variant="outline" bg="gray.200" />
+            <Button
+              title="Criar Conta"
+              variant="outline"
+              bg="gray.200"
+              onPress={handleNewAccount}
+            />
           </Center>
         </VStack>
 

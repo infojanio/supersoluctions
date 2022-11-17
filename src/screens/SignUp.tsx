@@ -1,39 +1,34 @@
 import React, { Component } from 'react'
+
+import { useNavigation } from '@react-navigation/native'
+
 import {
   VStack,
-  Image,
   Center,
   Text,
-  Heading,
   View,
   ScrollView,
   Icon,
   IconButton,
   Box,
-  IIconProps,
-  IIconButtonProps,
-  AddIcon,
   Stack,
 } from 'native-base'
 
-import LogoSvg from '@assets/logomarca.svg'
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
 import { Feather } from '@expo/vector-icons'
 import { MaterialIcons } from '@expo/vector-icons'
-import { RectButtonProps } from 'react-native-gesture-handler'
-//import BackgoundImg from '@assets/background.png'
-
-/*
-interface Props extends RectButtonProps {
-  title: string
-  icon: React.FC<IIconButtonProps>
-}
-*/
 
 export function SignUp() {
+  const navigation = useNavigation()
+
   const [show, setShow] = React.useState(false) //mostra senha
   const handleClick = () => setShow(!show)
+
+  //voltar a tela anterior
+  function handleGoBack() {
+    navigation.goBack()
+  }
 
   return (
     <ScrollView
@@ -43,7 +38,7 @@ export function SignUp() {
       <VStack
         space={24}
         direction="row"
-        marginTop="8"
+        marginTop="4"
         marginBottom="2"
         marginLeft="4"
       >
@@ -56,6 +51,7 @@ export function SignUp() {
               as: Feather,
               name: 'chevron-left',
             }}
+            onPress={handleGoBack}
           />
         ))}
 
@@ -350,8 +346,13 @@ export function SignUp() {
         </VStack>
       </View>
 
-      <View marginLeft="4" marginRight="4" marginTop="1">
-        <Button title="Criar Conta" variant="outline" bg="gray.200" />
+      <View marginLeft="4" marginRight="4" marginTop="0.5">
+        <Button
+          title="Cadastrar"
+          color="gray.50"
+          variant="outline"
+          bg="green.500"
+        />
       </View>
     </ScrollView>
   )
