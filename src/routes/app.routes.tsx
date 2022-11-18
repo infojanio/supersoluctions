@@ -1,3 +1,4 @@
+import { Platform } from 'react-native'
 import { useTheme } from 'native-base'
 
 import {
@@ -9,20 +10,20 @@ import HomeSvg from '@assets/home.svg'
 import SearchSvg from '@assets/search.svg'
 import CartSvg from '@assets/cart.svg'
 import RequestSvg from '@assets/request.svg'
-import MenuSvg from '@assets/history.svg'
+import ProfileSvg from '@assets/profile.svg'
 
 import { Home } from '@screens/Home'
 import { Search } from '@screens/Search'
 import { Cart } from '@screens/Cart'
 import { Request } from '@screens/Request'
-import { Menu } from '@screens/Menu'
+import { Profile } from '@screens/Profile'
 
 type AppRoutes = {
   home: undefined
   search: undefined
   cart: undefined
   request: undefined
-  menu: undefined
+  profile: undefined
 }
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>
@@ -39,12 +40,15 @@ export function AppRoutes() {
     <Navigator
       screenOptions={{
         headerShown: false,
-        tabBarShowLabel: false,
+        // tabBarShowLabel: false,
         tabBarActiveTintColor: colors.green[500],
         tabBarInactiveTintColor: colors.blueGray[800],
         tabBarStyle: {
           backgroundColor: colors.gray[100],
           borderTopWidth: 1,
+          height: Platform.OS === 'android' ? 'auto' : 96,
+          paddingBottom: sizes[8],
+          paddingTop: sizes[6],
         },
       }}
     >
@@ -85,14 +89,24 @@ export function AppRoutes() {
         }}
       />
       <Screen
-        name="menu"
-        component={Menu}
+        name="profile"
+        component={Profile}
         options={{
           tabBarIcon: ({ color }) => (
-            <MenuSvg fill={color} width={iconSize} height={iconSize} />
+            <ProfileSvg fill={color} width={iconSize} height={iconSize} />
           ),
         }}
       />
+
+      {/*  Inserir uma rota pra não aparecer o ícone no tabBar 
+      <Screen
+        name="profile"
+        component={Profile}
+        options={{
+          tabBarButton: () => null,
+        }} //não mostra ícone
+      />
+      */}
     </Navigator>
   )
 }
