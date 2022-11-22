@@ -1,4 +1,5 @@
 import {
+  Center,
   Heading,
   HStack,
   Icon,
@@ -7,25 +8,40 @@ import {
   View,
   VStack,
 } from 'native-base'
+
+import { Button } from '@components/Button'
 import React from 'react'
 
-import LogoSvg from '@assets/logo.svg'
+import LogoSvg from '@assets/logomarca.svg'
 
 export function HomeHeader() {
   //definição do tamanho dos ícones
   const { sizes, colors } = useTheme()
-  const iconSize = sizes[24]
+  const iconSize = sizes[10]
 
   return (
-    <VStack bg="gray.100">
-      <VStack>
-        <Heading>
-          <LogoSvg width={iconSize} height={iconSize} />
-        </Heading>
-        <View color="gray.600">
-          <Text>Compre App</Text>
-        </View>
-      </VStack>
-    </VStack>
+    <HStack
+      bg="green.500"
+      paddingBottom={2}
+      paddingTop={2}
+      justifyContent="space-between"
+      alignItems="center"
+    >
+      <View marginLeft="2">
+        <LogoSvg width={iconSize} height={iconSize} />
+      </View>
+
+      <Center flex="1" ml="2" mr="8" mt="2" flexDirection="row">
+        <Button
+          title="Onde entregamos?"
+          variant="outline"
+          bg="gray.50"
+          borderColor="gray.100"
+          onPress={() => {
+            'função vazia!'
+          }}
+        />
+      </Center>
+    </HStack>
   )
 }
