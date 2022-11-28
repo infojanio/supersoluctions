@@ -19,20 +19,35 @@ type Props = {
 }
 
 import { TouchableOpacity } from 'react-native'
-import AccountSvg from '@assets/account.svg'
+
+import AcougueSvg from '@assets/acougues.svg'
+import IceSvg from '@assets/doces.svg'
+import MeatSvg from '@assets/acougues.svg'
+import CookieSvg from '@assets/biscoito.svg'
+import HygieneSvg from '@assets/higiene.svg'
+import DrinkSvg from '@assets/drink.svg'
+import BabySvg from '@assets/baby.svg'
+import PetSvg from '@assets/dog.svg'
 
 export function Category() {
   return (
-    <Stack bg="gray.100" pb={2}>
+    <Stack bg="gray.300" pb={2} pt={4}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <VStack>
+        <VStack
+          bg="gray.100"
+          borderColor="gray.300"
+          borderWidth={1}
+          borderRadius="3xl"
+          paddingBottom={1}
+          ml="2"
+          mr="2"
+        >
           <View flexDirection="row" alignItems="center">
             <Box
               alignItems="center"
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -40,9 +55,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={40} width={40} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Carnes {'\n'}& Peixes
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -52,7 +67,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -60,9 +74,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Frios {'\n'}& Laticínios
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -72,7 +86,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -80,9 +93,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <HygieneSvg height={50} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Higiene {'\n'}& Perfumaria
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -94,7 +107,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -102,9 +114,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={40} width={40} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <DrinkSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Bebidas
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -114,7 +126,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -122,9 +133,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Congelados
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -134,7 +145,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -142,71 +152,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
-                </Text>
-              </TouchableOpacity>
-            </Box>
-          </View>
-
-          <View flexDirection="row" alignItems="center">
-            <Box
-              alignItems="center"
-              justifyContent="center"
-              bg="purple.50"
-              borderRadius={24}
-              borderWidth="0.5"
-              mt="2"
-              mb="1"
-              ml="4"
-              rounded="lg"
-              boxSize={24}
-            >
-              <TouchableOpacity>
-                <AccountSvg height={40} width={40} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
-                </Text>
-              </TouchableOpacity>
-            </Box>
-
-            <Box
-              alignItems="center"
-              justifyContent="center"
-              bg="purple.50"
-              borderRadius={24}
-              borderWidth="0.5"
-              mt="2"
-              mb="1"
-              ml="4"
-              rounded="lg"
-              boxSize={24}
-            >
-              <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
-                </Text>
-              </TouchableOpacity>
-            </Box>
-
-            <Box
-              alignItems="center"
-              justifyContent="center"
-              bg="purple.50"
-              borderRadius={24}
-              borderWidth="0.5"
-              mt="2"
-              mb="1"
-              ml="4"
-              rounded="lg"
-              boxSize={24}
-            >
-              <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Limpeza
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -218,7 +166,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -226,9 +173,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={40} width={40} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <BabySvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Bebê
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -238,7 +185,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -246,9 +192,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Pães e Bolos
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -258,7 +204,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -266,9 +211,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Descartáveis{'\n'}& Tech
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -280,7 +225,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -288,9 +232,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={40} width={40} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Molhos & Conservas
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -300,7 +244,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -308,9 +251,9 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <IceSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Sorvetes
                 </Text>
               </TouchableOpacity>
             </Box>
@@ -320,7 +263,6 @@ export function Category() {
               justifyContent="center"
               bg="purple.50"
               borderRadius={24}
-              borderWidth="0.5"
               mt="2"
               mb="1"
               ml="4"
@@ -328,9 +270,68 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <AccountSvg height={32} width={32} />
-                <Text fontSize="xs" pt="2" pb="2" color="black">
-                  Cadastre-se
+                <CookieSvg height={40} width={60} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Biscoitos & Salgadinhos
+                </Text>
+              </TouchableOpacity>
+            </Box>
+          </View>
+
+          <View flexDirection="row" alignItems="center">
+            <Box
+              alignItems="center"
+              justifyContent="center"
+              bg="purple.50"
+              borderRadius={24}
+              mt="2"
+              mb="1"
+              ml="4"
+              rounded="lg"
+              boxSize={24}
+            >
+              <TouchableOpacity>
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Hortifrúti
+                </Text>
+              </TouchableOpacity>
+            </Box>
+
+            <Box
+              alignItems="center"
+              justifyContent="center"
+              bg="purple.50"
+              borderRadius={24}
+              mt="2"
+              mb="1"
+              ml="4"
+              rounded="lg"
+              boxSize={24}
+            >
+              <TouchableOpacity>
+                <PetSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Pet Shop
+                </Text>
+              </TouchableOpacity>
+            </Box>
+
+            <Box
+              alignItems="center"
+              justifyContent="center"
+              bg="purple.50"
+              borderRadius={24}
+              mt="2"
+              mb="1"
+              ml="4"
+              rounded="lg"
+              boxSize={24}
+            >
+              <TouchableOpacity>
+                <MeatSvg height={60} width={80} />
+                <Text fontSize="md" pb="4" color="black" textAlign="center">
+                  Outros
                 </Text>
               </TouchableOpacity>
             </Box>

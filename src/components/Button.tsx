@@ -14,15 +14,15 @@ export function Button({ title, variant = 'solid', ...rest }: Props) {
       bg={variant === 'outline' ? 'transparent' : 'green.600'}
       borderWidth={variant === 'outline' ? 1.5 : 0}
       borderColor="green.500"
-      rounded="full"
+      rounded="md"
       _pressed={{
-        bg: variant === 'outline' ? 'green.300' : 'green.500',
+        bg: variant === 'outline' ? 'green.100' : 'green.200',
       }}
       {...rest}
     >
       <Text
-        color={variant === 'outline' ? 'green.900' : 'white'}
-        fontFamily="heading"
+        color={variant === 'outline' ? 'gray.500' : 'blue.400'}
+        fontFamily="body"
         fontSize="md"
       >
         {title}
