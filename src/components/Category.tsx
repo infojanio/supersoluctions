@@ -22,7 +22,7 @@ import { TouchableOpacity } from 'react-native'
 
 import AcougueSvg from '@assets/acougues.svg'
 import IceSvg from '@assets/doces.svg'
-import MeatSvg from '@assets/acougues.svg'
+import MeatSvg from '@assets/2.svg'
 import CookieSvg from '@assets/biscoito.svg'
 import HygieneSvg from '@assets/higiene.svg'
 import DrinkSvg from '@assets/drink.svg'
@@ -32,21 +32,21 @@ import PetSvg from '@assets/dog.svg'
 export function Category() {
   return (
     <Stack bg="gray.300" pb={2} pt={4}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <VStack
-          bg="gray.100"
-          borderColor="gray.300"
-          borderWidth={1}
-          borderRadius="3xl"
-          paddingBottom={1}
-          ml="2"
-          mr="2"
-        >
+      <VStack
+        bg="gray.100"
+        borderColor="gray.300"
+        borderWidth={1}
+        borderRadius="3xl"
+        paddingBottom={1}
+        ml="2"
+        mr="2"
+      >
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View flexDirection="row" alignItems="center">
             <Box
               alignItems="center"
               justifyContent="center"
-              bg="purple.50"
+              bg="white.50"
               borderRadius={24}
               mt="2"
               mb="1"
@@ -173,7 +173,7 @@ export function Category() {
               boxSize={24}
             >
               <TouchableOpacity>
-                <BabySvg height={60} width={80} />
+                <IceSvg height={60} width={80} />
                 <Text fontSize="md" pb="4" color="black" textAlign="center">
                   Bebê
                 </Text>
@@ -336,8 +336,8 @@ export function Category() {
               </TouchableOpacity>
             </Box>
           </View>
-        </VStack>
-      </ScrollView>
+        </ScrollView>
+      </VStack>
     </Stack>
   )
 }

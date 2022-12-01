@@ -357,6 +357,7 @@ export function Sessions() {
               borderWidth="1"
               mt="2"
               ml="1"
+              mr="2"
               rounded="sm"
               boxSize={24}
             >
