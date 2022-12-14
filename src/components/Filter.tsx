@@ -6,7 +6,7 @@ import { View } from 'native-base'
 
 export function Filter() {
   return (
-    <View ml="2" mr="2" pt="2" pb="2">
+    <View ml="2" mr="2" pt="2" pb="1">
       <Button
         bg="gray.100"
         color="gray.700"
