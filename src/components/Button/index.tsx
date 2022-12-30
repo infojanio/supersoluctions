@@ -21,7 +21,7 @@ export function Button({ title, variant = 'solid', ...rest }: Props) {
       {...rest}
     >
       <Text
-        color={variant === 'outline' ? 'gray.500' : 'blue.400'}
+        color={variant === 'outline' ? 'gray.500' : 'white'}
         fontFamily="body"
         fontSize="md"
       >

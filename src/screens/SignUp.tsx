@@ -44,6 +44,7 @@ export function SignUp() {
       >
         {['sm'].map((size) => (
           <IconButton
+            key={size}
             borderRadius="full"
             size={size}
             variant="outline"

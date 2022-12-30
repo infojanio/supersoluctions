@@ -2,7 +2,7 @@ import { Sessions } from '@components/Sessions'
 import { HomeHeader } from '@components/HomeHeader'
 import { VStack, Text, Divider } from 'native-base'
 import { Filter } from '@components/Filter'
-import { BannerShow } from '@components/BannerShow'
+import { Departament } from '@components/Departament'
 
 import { SeparatorItem } from '@components/SeparatorItem'
 import { ScrollView } from 'react-native-virtualized-view'
@@ -16,14 +16,9 @@ export function Home() {
 
       <Sessions />
 
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <VStack flex={1} bg={'gray.50'} marginTop={2}>
-          <Text
-            fontSize={'lg'}
-            marginLeft={4}
-            color={'gray.700'}
-            borderColor={'blueGray.700'}
-          >
+          <Text fontSize={'lg'} paddingLeft={4} bg={'gray.100'}>
             Promoções
           </Text>
           <Promotion />
@@ -31,11 +26,11 @@ export function Home() {
 
         <SeparatorItem />
         <VStack flex={1} bg={'white'}>
-          <Text fontSize={'lg'} marginLeft={4} color={'gray.700'}>
+          <Text fontSize={'lg'} paddingLeft={4} bg={'gray.100'}>
             Departamentos
           </Text>
         </VStack>
-        <BannerShow />
+        <Departament />
       </ScrollView>
     </VStack>
   )

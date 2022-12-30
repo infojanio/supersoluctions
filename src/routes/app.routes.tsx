@@ -17,6 +17,7 @@ import { Search } from '@screens/Search'
 import { Cart } from '@screens/Cart'
 import { Request } from '@screens/Request'
 import { Profile } from '@screens/Profile'
+import { SignUp } from '@screens/SignUp'
 
 type AppRoutes = {
   home: undefined
@@ -24,6 +25,8 @@ type AppRoutes = {
   cart: undefined
   request: undefined
   profile: undefined
+
+  signUp: undefined
 }
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>

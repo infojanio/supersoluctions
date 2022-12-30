@@ -16,7 +16,7 @@ export function Routes() {
       {' '}
       {/*garante não aparecer fundo branco na trasição da tela */}
       <NavigationContainer>
-        <AppRoutes />
+        <AuthRoutes />
       </NavigationContainer>
     </Box>
   )

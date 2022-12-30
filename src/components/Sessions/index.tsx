@@ -1,9 +1,11 @@
 import React from 'react'
 import { HStack, Text, ScrollView, Box, Stack, View } from 'native-base'
 
+import { SignUp } from '@screens/SignUp'
+
 import { TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { authNavigatorRoutesProps } from '@routes/auth.routes'
+import { AuthNavigatorRoutesProps } from '@routes/auth.routes'
 
 import ListSvg from '@assets/favorite.svg'
 import RegisterSvg from '@assets/account.svg'
@@ -11,7 +13,7 @@ import RequestSvg from '@assets/pedidos.svg'
 import DeliverySvg from '@assets/location.svg'
 
 export function Sessions() {
-  const navigation = useNavigation<authNavigatorRoutesProps>()
+  const navigation = useNavigation<AuthNavigatorRoutesProps>()
 
   //Criar nova conta, preciso fazer ajustes no routes/index.tsx , acertar a navegação auth
   function handleNewAccount() {
@@ -19,7 +21,7 @@ export function Sessions() {
   }
 
   return (
-    <Stack bg="gray.100" pb={0}>
+    <Stack bg="gray.100" pb={2}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <HStack>
           <View flexDirection="column" alignItems="center" ml={1}>
@@ -33,7 +35,7 @@ export function Sessions() {
               mt="2"
               ml="1"
               rounded="sm"
-              boxSize={24}
+              boxSize={20}
             >
               <TouchableOpacity onPress={handleNewAccount}>
                 <RegisterSvg height={50} width={50} />
@@ -55,7 +57,7 @@ export function Sessions() {
               mt="2"
               ml="1"
               rounded="sm"
-              boxSize={24}
+              boxSize={20}
             >
               <TouchableOpacity>
                 <ListSvg height={50} width={50} />
@@ -77,7 +79,7 @@ export function Sessions() {
               mt="2"
               ml="1"
               rounded="sm"
-              boxSize={24}
+              boxSize={20}
             >
               <TouchableOpacity>
                 <RequestSvg height={50} width={50} />
@@ -99,7 +101,7 @@ export function Sessions() {
               mt="2"
               ml="1"
               rounded="sm"
-              boxSize={24}
+              boxSize={20}
             >
               <TouchableOpacity>
                 <DeliverySvg height={50} width={50} />

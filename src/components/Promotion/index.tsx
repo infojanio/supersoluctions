@@ -53,12 +53,21 @@ export function Promotion() {
         showsHorizontalScrollIndicator={false}
         keyExtractor={(images) => String(images.id)}
         renderItem={({ item }) => (
-          <Image alt="promoções" source={item.image} style={styles.image} />
+          <Image
+            alt="promoções"
+            source={item.image}
+            width={width}
+            pt={2}
+            height={130}
+            marginLeft={1}
+            marginRight={1}
+            borderRadius={12}
+          />
         )}
       />
 
       {images.length > 1 ? (
-        <Box style={styles.dotsContainer}>
+        <Box flexDirection="row" justifyContent="center" marginTop={2}>
           {images.map((_, i) => (
             <View
               key={i}
@@ -77,26 +86,14 @@ export function Promotion() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-
-  image: {
-    width,
-    height: 140,
-    marginLeft: 2,
-    marginRight: 2,
-    borderRadius: 12,
-  },
-
-  dotsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: 10,
+    marginTop: 2,
+    marginBottom: 4,
   },
 
   dot: {
     width: 8,
     height: 8,
     borderRadius: 4,
-    marginHorizontal: 1,
+    marginHorizontal: 2,
   },
 })
