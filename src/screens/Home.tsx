@@ -2,7 +2,7 @@ import { Sessions } from '@components/Sessions'
 import { HomeHeader } from '@components/HomeHeader'
 import { VStack, Text, Divider } from 'native-base'
 import { Filter } from '@components/Filter'
-import { Departament } from '@components/Departament'
+import { Department } from '@components/Department'
 
 import { SeparatorItem } from '@components/SeparatorItem'
 import { ScrollView } from 'react-native-virtualized-view'
@@ -30,7 +30,7 @@ export function Home() {
             Departamentos
           </Text>
         </VStack>
-        <Departament />
+        <Department />
       </ScrollView>
     </VStack>
   )
