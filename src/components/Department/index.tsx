@@ -8,11 +8,7 @@ import { SeparatorItem } from '../SeparatorItem'
 
 export function Department() {
   function renderItem({ item }: ListRenderItemInfo<Category>) {
-    return (
-      <TouchableOpacity>
-        <CategoryItem {...item} />
-      </TouchableOpacity>
-    )
+    return <CategoryItem {...item} />
   }
 
   return (

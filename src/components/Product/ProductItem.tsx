@@ -5,7 +5,14 @@ import { MaterialIcons } from '@expo/vector-icons'
 
 import { Product } from '@data/ProductList1'
 
-export function ProductItem({ id, type, subcategory, name, price, image }: Product) {
+export function ProductItem({
+  id,
+  type,
+  subcategory,
+  name,
+  price,
+  image,
+}: Product) {
   return (
     <VStack
       backgroundColor="white"
@@ -17,7 +24,11 @@ export function ProductItem({ id, type, subcategory, name, price, image }: Produ
     >
       <Image alt="produtos" ml={2} height={24} width={24} source={image} />
       <View flex={1} marginLeft={2}>
-        <Text fontSize={16}>{title}</Text>
+        <Text fontSize={16}>{name}</Text>
+      </View>
+
+      <View flex={1} marginLeft={2}>
+        <Text fontSize={16}>{price}</Text>
       </View>
       <Icon
         as={<MaterialIcons name="navigate-next" />}
@@ -31,6 +42,6 @@ export function ProductItem({ id, type, subcategory, name, price, image }: Produ
           color: 'gray.200',
         }}
       />
-    </HStack>
+    </VStack>
   )
 }

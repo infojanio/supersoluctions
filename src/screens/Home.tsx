@@ -7,14 +7,14 @@ import { Department } from '@components/Department'
 import { SeparatorItem } from '@components/SeparatorItem'
 import { ScrollView } from 'react-native-virtualized-view'
 import { Promotion } from '@components/Promotion'
+import { ProductList } from '@screens/ProductList'
+import { Group } from '@components/Group'
 
 export function Home() {
   return (
     <VStack flex={1}>
       <HomeHeader />
       <Filter />
-
-      <Sessions />
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <VStack flex={1} bg={'gray.50'} marginTop={2}>
