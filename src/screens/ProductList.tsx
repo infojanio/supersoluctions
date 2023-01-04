@@ -12,12 +12,12 @@ import { useState } from 'react'
 
 export function ProductList() {
   const [groups, setGroups] = useState([
-    'Carnes & Peixes',
-    'Frios & Laticínios',
-    'Higiene & Perfumaria',
-    'Bebidas',
+    'Carnes Bovinas',
+    'Aves',
+    'Peixes',
+    'Linguiças',
   ])
-  const [groupSelected, setGroupSelected] = useState('Carnes & Peixes')
+  const [groupSelected, setGroupSelected] = useState('Carnes Bovinas')
 
   return (
     <VStack flex={1}>
