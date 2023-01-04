@@ -6,6 +6,7 @@ import {
   HStack,
   Icon,
   useTheme,
+  Text,
   Button,
   Alert,
   Stack,
@@ -30,34 +31,52 @@ export function HomeProduct() {
   return (
     <HStack
       bg="green.600"
-      paddingBottom={4}
+      paddingBottom={2}
       paddingTop={4}
       justifyContent="space-between"
       alignItems="center"
     >
-      <Center flex="1" pr={4} ml="1" mr="1" mt="1" flexDirection="row">
-        <Input
-          type="text"
-          InputRightElement={
-            <Stack
-              width={260}
-              maxWidth={260}
-              direction={{
-                md: 'row',
-              }}
-              space="4"
-            />
-          }
+      <TouchableOpacity>
+        <Icon
+          as={<MaterialIcons name="reorder" />}
+          size={8}
+          mr={2}
+          _light={{
+            color: 'gray.100',
+          }}
+          _dark={{
+            color: 'gray.700',
+          }}
         />
+      </TouchableOpacity>
+
+      <Center flex="1" pr={4} ml="2" mr="2" mt="1" flexDirection="row">
+        <Input
+          flex={1}
+          borderRadius="md"
+          borderBottomWidth={1}
+          size="sm"
+          placeholder="Buscar produtos"
+          _light={{
+            placeholderTextColor: 'blueGray.400',
+          }}
+          _dark={{
+            placeholderTextColor: 'blueGray.50',
+          }}
+        />{' '}
       </Center>
+
+      <Text fontWeight={'bold'} fontSize={14} color="red.500" mr={2}>
+        R$ 0,00
+      </Text>
 
       <TouchableOpacity>
         <Icon
-          as={<MaterialIcons name="logout" />}
+          as={<MaterialIcons name="shopping-cart" />}
           size={6}
           mr={4}
           _light={{
-            color: 'gray.200',
+            color: 'gray.100',
           }}
           _dark={{
             color: 'gray.700',
