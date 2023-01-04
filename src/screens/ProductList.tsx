@@ -1,5 +1,5 @@
 import { Sessions } from '@components/Sessions'
-import { HomeHeader } from '@components/HomeHeader'
+import { HomeProduct } from '@components/HomeProduct'
 import { VStack, Text, Divider, HStack, FlatList } from 'native-base'
 import { Filter } from '@components/Filter'
 import { Department } from '@components/Department'
@@ -21,7 +21,7 @@ export function ProductList() {
 
   return (
     <VStack flex={1}>
-      <HomeHeader />
+      <HomeProduct />
 
       <FlatList
         data={groups}
