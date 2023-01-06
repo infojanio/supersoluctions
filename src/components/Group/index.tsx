@@ -1,4 +1,12 @@
-import { Text, Pressable, IPressableProps } from 'native-base'
+import { SeparatorItem } from '@components/SeparatorItem'
+import {
+  Text,
+  Pressable,
+  IPressableProps,
+  VStack,
+  Divider,
+  View,
+} from 'native-base'
 
 type Props = IPressableProps & {
   name: string

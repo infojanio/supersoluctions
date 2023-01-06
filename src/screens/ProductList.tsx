@@ -9,6 +9,7 @@ import { ScrollView } from 'react-native-virtualized-view'
 import { Promotion } from '@components/Promotion'
 import { Group } from '@components/Group'
 import { useState } from 'react'
+import { AllProduct } from '@components/AllProduct'
 
 export function ProductList() {
   const [groups, setGroups] = useState([
@@ -44,11 +45,11 @@ export function ProductList() {
 
         <SeparatorItem />
         <VStack flex={1} bg={'white'}>
-          <Text fontSize={'lg'} paddingLeft={4} bg={'gray.100'}>
-            Departamentos
+          <Text fontSize={'sm'} paddingLeft={4} bg={'gray.100'}>
+            Açougue e peixaria
           </Text>
         </VStack>
-        <Department />
+        <AllProduct />
       </ScrollView>
     </VStack>
   )
