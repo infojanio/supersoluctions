@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { FlatList, View, Text, Image, Container } from 'native-base'
+import { FlatList, View, Text, Image, Container, HStack } from 'native-base'
 
 import { SeparatorItem } from '../SeparatorItem'
 import { TouchableOpacity, SafeAreaView, StyleSheet } from 'react-native'
@@ -16,7 +16,7 @@ export function AllProduct() {
 
   //carrega usuários do github
   function getusers() {
-    fetch('https://api.github.com/users')
+    fetch('https://api.github.com/users') //
       .then((response) => response.json())
       .then((json) => {
         setUsers(json)
@@ -27,10 +27,15 @@ export function AllProduct() {
     getusers()
   }, [])
 
-  function renderUser(item) {
+  function renderUser(item: any) {
     return (
-      <View>
-        <Image alt="foto" source={{ uri: item?.avatar_url }} />
+      <HStack>
+        <Image
+          alt="foto"
+          source={{ uri: item?.avatar_url }}
+          size={16}
+          borderRadius="full"
+        />
         <View>
           <Text>{item.login}</Text>
           <Text>{item.url}</Text>
@@ -41,7 +46,7 @@ export function AllProduct() {
             </TouchableOpacity>
           </View>
         </View>
-      </View>
+      </HStack>
     )
   }
 
@@ -52,7 +57,7 @@ export function AllProduct() {
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={SeparatorItem}
         data={users}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => String(item.id)}
         renderItem={({ item }) => renderUser(item)}
       />
     </SafeAreaView>
