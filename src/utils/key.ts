@@ -1,1 +1,1 @@
-export const store_hash = 'jL06012007?224022402240'
+export const token = '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'
